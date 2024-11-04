@@ -103,15 +103,16 @@ body {
 
 .hero__image-wrapper {
     background-color: #3a7bfd;
-    padding: 1px;
-    border-radius: 60%;
+    padding: 30px;
+    border-radius: 30% 70% / 50% 50%;
     display: inline-block;
+    
 }
 
 .hero__image {
     width: 150px; /* Default size */
     height: 150px;
-    border-radius: 50%;
+    border-radius: 40%;
     object-fit: cover;
 }
 
@@ -138,6 +139,15 @@ body {
 .footer__social-link:hover {
     color: #3a7bfd;
 }
+.text {
+    font-size: 20px; /* Adjust this value as needed */
+   
+}
+
+
+.typing {
+    font-weight: bold; /* Ensures text is bold */
+}
 
 /* Responsive Design */
 @media (min-width: 768px) {
@@ -151,30 +161,52 @@ body {
         text-align: left;
     }
 
+    .typing {
+        font-size: 20px; /* Font size for tablets and desktops */
+    }
+
     /* Keep social links aligned left on larger screens */
     .footer__social-links {
         justify-content: left;
     }
+
     .hero__image {
         width: 300px; /* Larger size for tablets and desktops */
         height: 300px;
     }
-
 }
-
+.text {
+    font-size: 20px; /* Adjust this value as needed */
+ 
+}
 @media (max-width: 767px) {
     /* Center social links on smaller screens */
     .footer__social-links {
         justify-content: center;
     }
+
+    .typing {
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+}
+.text {
+    font-size: 20px; /* Adjust this value as needed */
+    
 }
 @media (min-width: 1024px) {
-    .hero__image {
-        width: 450px; /* Even larger for larger screens */
-        height: 450px;
+    .hero__image-wrapper {
+        background-color: #3a7bfd;
+        padding: 60px;
+        border-radius: 30% 70% / 50% 50%;
+        display: inline-block;
     }
-
-
+    
+    .hero__image {
+        width: 450px; /* Default size */
+        height: 450px;
+        border-radius: 40%;
+        object-fit: cover;
+    }
 
     .hero__intro {
         font-size: 54px;
@@ -186,4 +218,13 @@ body {
         font-weight: bold;
         color: #333;
     }
+
+    .typing {
+        font-size: 28px; /* Font size for larger screens */
+    }
+    .text {
+        font-size: 28px; /* Adjust this value as needed */
+        
+    }
 }
+
