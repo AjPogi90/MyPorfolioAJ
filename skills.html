@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="skills-container">
+        <h1>Skills</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('tech')">Tech Stack</div>
+            <div class="tab" onclick="showTab('tools')">Tools</div>
+        </div>
+
+        <div id="tech" class="skills-grid">
+            <div class="skill-card">
+                <img src="image/html.png" alt="HTML" class="skill-image">
+                HTML
+            </div>
+            <div class="skill-card">
+                <img src="image/css.png" alt="CSS" class="skill-image">
+                CSS
+            </div>
+            <div class="skill-card">
+                <img src="image/php.png" alt="PHP" class="skill-image">
+                PHP
+            </div>
+            <div class="skill-card">
+                <img src="image/js.png" alt="JavaScript" class="skill-image">
+                JavaScript
+            </div>
+            <div class="skill-card">
+                <img src="image/java.png" alt="Java" class="skill-image">
+                Java
+            </div>
+            <div class="skill-card">
+                <img src="image/c+.png" alt="C++" class="skill-image">
+                C++
+            </div>
+            <div class="skill-card">
+                <img src="image/PY.png" alt="Python" class="skill-image">
+                Python
+            </div>
+            <div class="skill-card">
+                <img src="image/C.png" alt="C" class="skill-image">
+                C
+            </div>
+        </div>
+
+        <div id="tools" class="skills-grid" style="display: none;">
+            <div class="skill-card">
+                <img src="image/git.png" alt="Git" class="skill-image">
+                Git
+            </div>
+            <div class="skill-card">
+                <img src="image/github.png" alt="GitHub" class="skill-image">
+                GitHub
+            </div>
+            <div class="skill-card">
+                <img src="image/mongodb.png" alt="Mongodb" class="skill-image">
+                Mongodb
+            </div>
+            <div class="skill-card">
+                <img src="image/mysql.png" alt="MySQL" class="skill-image">
+                MySQL
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.skills-grid').forEach(grid => grid.style.display = 'none');
+            document.getElementById(tabId).style.display = 'grid';
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+    <!-- Link to script.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="script.js"></script>
+
+   <!-- Skill Detail Modal -->
+<div id="skill-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <img id="skill-image" src="" alt="Skill Image" class="modal-image">
+            <div class="modal-text">
+                <h2 id="skill-title"></h2>
+                <p id="skill-description"></p>
+                <p><strong>Years of Experience:</strong> <span id="skill-experience"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
